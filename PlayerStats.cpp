@@ -10,12 +10,13 @@ private:
     int gameTime;
     int cspm10, cspm20, kills, deaths, assists, ccScore, visScore;
     int dmgToChamps, dmgToTurrets;
+    int lanePlates, laneKills, laneAssists, laneDeaths;
     int dmgHealed;
     int objHelped, gold, apm;
 
 public:
     PlayerStats(string name, string chClass, int time, int cs10, int cs20, int k, int d,
-                int as, int cc, int vis, int dTC, int dTT, int dHeal, int obj, int g, int at)
+                int as, int cc, int vis, int dTC, int dTT, int lPlate, int lKill, int lAss, int lDeath, int dHeal, int obj, int g, int at)
     {
         champName = name;
         champClass = chClass;
@@ -87,6 +88,22 @@ public:
     inline int getDmgToTurrets()
     {
         return dmgToTurrets;
+    }
+    inline int getLanePlates()
+    {
+        return lanePlates;
+    }
+    inline int getLaneKills()
+    {
+        return laneKills;
+    }
+    inline int getLaneAssists()
+    {
+        return laneAssists;
+    }
+    inline int getLaneDeaths()
+    {
+        return laneDeaths;
     }
     inline int getDmgHealed()
     {
